@@ -599,6 +599,10 @@
 
   /* ── Responsive ────────────────────────────────────── */
   @media (max-width: 768px) {
+    .hero__name {
+      font-size: clamp(2.5rem, 10vw, 4rem);
+    }
+
     .intro__grid {
       grid-template-columns: 1fr;
     }
