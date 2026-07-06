@@ -1,4 +1,5 @@
 import fs from 'node:fs/promises';
+import { existsSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import mammoth from 'mammoth';
@@ -28,8 +29,25 @@ type SourceConfig = {
 
 const IMAGE_EXTENSIONS = new Set(['.jpg', '.jpeg', '.png', '.webp', '.avif', '.gif', '.JPG', '.JPEG', '.PNG']);
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const staticImagesRoot = path.join(__dirname, '../../..', 'static', 'media', 'images');
+function getStaticImagesRoot() {
+	const __dirname = path.dirname(fileURLToPath(import.meta.url));
+	// Try multiple possible paths for different environments
+	const possiblePaths = [
+		path.join(__dirname, '../../..', 'static', 'media', 'images'), // local/dev
+		path.join(process.cwd(), 'static', 'media', 'images'), // build time
+		'/var/task/static/media/images' // Vercel runtime
+	];
+
+	for (const p of possiblePaths) {
+		try {
+			if (existsSync(p)) return p;
+		} catch {}
+	}
+	// Default to first path (will error if none work, which is better than silent failure)
+	return possiblePaths[0];
+}
+
+const staticImagesRoot = getStaticImagesRoot();
 
 const sources: SourceConfig[] = [
 	{
