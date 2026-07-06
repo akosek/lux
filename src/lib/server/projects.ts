@@ -31,19 +31,42 @@ const IMAGE_EXTENSIONS = new Set(['.jpg', '.jpeg', '.png', '.webp', '.avif', '.g
 
 function getStaticImagesRoot() {
 	const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
 	// Try multiple possible paths for different environments
 	const possiblePaths = [
-		path.join(__dirname, '../../..', 'static', 'media', 'images'), // local/dev
-		path.join(process.cwd(), 'static', 'media', 'images'), // build time
-		'/var/task/static/media/images' // Vercel runtime
+		// Development / local
+		path.join(__dirname, '../../..', 'static', 'media', 'images'),
+
+		// Build time with process.cwd()
+		path.join(process.cwd(), 'static', 'media', 'images'),
+
+		// Vercel serverless runtime
+		path.join(process.cwd(), '.vercel', 'output', 'static', 'media', 'images'),
+
+		// Alternative Vercel paths
+		'static/media/images',
+		'/var/task/static/media/images',
+		path.join('/var/task', 'static', 'media', 'images'),
 	];
 
+	// Find the first path that exists
 	for (const p of possiblePaths) {
 		try {
-			if (existsSync(p)) return p;
-		} catch {}
+			if (existsSync(p)) {
+				console.log(`[Projects] Using static path: ${p}`);
+				return p;
+			}
+		} catch (e) {
+			console.debug(`[Projects] Path not found: ${p}`);
+		}
 	}
-	// Default to first path (will error if none work, which is better than silent failure)
+
+	// Log available paths for debugging
+	console.warn(`[Projects] Warning: Could not find static images in any expected path. Tried:`, possiblePaths);
+	console.warn(`[Projects] Current working directory: ${process.cwd()}`);
+	console.warn(`[Projects] __dirname: ${__dirname}`);
+
+	// Return first path anyway - will error with more info if it fails
 	return possiblePaths[0];
 }
 
