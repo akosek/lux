@@ -1,5 +1,6 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import mammoth from 'mammoth';
 
 export type ProjectCategory = 'Performance' | 'Costume Design';
@@ -27,7 +28,8 @@ type SourceConfig = {
 
 const IMAGE_EXTENSIONS = new Set(['.jpg', '.jpeg', '.png', '.webp', '.avif', '.gif', '.JPG', '.JPEG', '.PNG']);
 
-const staticImagesRoot = path.join(process.cwd(), 'static', 'media', 'images');
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const staticImagesRoot = path.join(__dirname, '../../..', 'static', 'media', 'images');
 
 const sources: SourceConfig[] = [
 	{
