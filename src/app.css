@@ -6,14 +6,24 @@
 }
 
 :root {
-  /* Palette */
-  --color-bg:        #0d0d0d;
-  --color-surface:   #161616;
-  --color-border:    #2a2a2a;
+  /* Color Palette: Purple / Pink / Teal */
+  /* Dark backgrounds with lavender + pink base, teal accent */
+
+  /* Neutrals (dark mode) */
+  --color-bg:        #0d0d0f;
+  --color-surface:   #1a1a24;
+  --color-border:    #2d2d3f;
   --color-text:      #e8e4dc;
-  --color-muted:     #7a7570;
-  --color-accent:    #c8b89a;   /* warm sand */
-  --color-accent-2:  #8b5e52;   /* deep terracotta */
+  --color-muted:     #9ca3af;
+
+  /* Primary accents */
+  --color-accent:    #14b8a6;   /* teal - main accent/contrast */
+  --color-accent-2:  #d946a6;   /* hot pink/magenta - secondary accent */
+
+  /* Supporting palette */
+  --color-purple:    #a78bfa;   /* lavender - supporting/hover states */
+  --color-purple-dark: #7c3aed; /* deep purple */
+  --color-cyan-bright: #06b6d4; /* bright cyan (alternative accent) */
 
   /* Typography */
   --font-display: 'Cormorant Garamond', Georgia, serif;

@@ -1,8 +1,8 @@
 <footer class="footer">
   <div class="container footer__inner">
-    <p class="footer__name">Lux</p>
+    <p class="footer__name">Lux Ulonska</p>
     <p class="footer__roles">
-      Dancer &middot; Mover &middot; Performer &middot; Costume Designer
+      Dancer &middot; Performer &middot; Costume Designer
     </p>
     <p class="footer__copy">
       &copy; {new Date().getFullYear()} All rights reserved
