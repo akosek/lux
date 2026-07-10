@@ -119,7 +119,7 @@
 </section>
 
 <!-- ── Brief intro ───────────────────────────────────── -->
-<section class="intro container">
+<!-- <section class="intro container">
   <div class="intro__grid">
     <div class="intro__text">
       <h2 class="intro__heading">
@@ -144,7 +144,7 @@
       {/each}
     </div>
   </div>
-</section>
+</section> -->
 
 <!-- ── Featured Work teaser ──────────────────────────── -->
 <section class="featured container">
@@ -291,7 +291,16 @@
     font-weight: 300;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--color-text);
+    background: linear-gradient(
+      135deg,
+      var(--color-text) 0%,
+      var(--color-text) 55%,
+      var(--palette-pink-lt) 80%,
+      var(--palette-pink) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     line-height: 1;
   }
 

@@ -43,10 +43,10 @@
   --color-subtle:    #6b5f8a;   /* very subtle text / decorative */
 
   /* ── Accent tokens (semantic) ── */
-  --color-accent:        var(--palette-teal-lt);    /* teal — main contrast accent */
-  --color-accent-hover:  var(--palette-mint);       /* mint — teal hover */
-  --color-accent-2:      var(--palette-pink);       /* cerise pink — secondary accent */
-  --color-accent-2-hover:var(--palette-pink-lt);    /* lighter pink hover */
+  --color-accent:        var(--palette-pink);       /* cerise pink — primary CTA */
+  --color-accent-hover:  var(--palette-pink-lt);    /* lighter pink hover */
+  --color-accent-2:      var(--palette-teal-lt);    /* teal — supporting accent */
+  --color-accent-2-hover:var(--palette-mint);       /* mint — teal hover */
   --color-accent-3:      var(--palette-lavender-lt);/* lavender — tertiary / decorative */
   --color-accent-3-hover:var(--palette-lavender);   /* deeper lavender hover */
 
