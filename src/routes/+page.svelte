@@ -25,6 +25,7 @@
   const featuredWork = [
     {
       title: "Gewebe",
+      slug: "gewebe",
       category: "Performance",
       image: media(
         "/media/images/performance/project_GEWEBE/main_Joana Racaan.jpg",
@@ -32,6 +33,7 @@
     },
     {
       title: "Human Nature",
+      slug: "human-nature",
       category: "Performance",
       image: media(
         "/media/images/performance/project_Human Nature/main_241022-W.T.TS0110_Baldemar Bottini.jpg",
@@ -39,6 +41,7 @@
     },
     {
       title: "Mushroom Tales",
+      slug: "mushroom-tales",
       category: "Performance",
       image: media(
         "/media/images/performance/project_Mushroom Tales/mainMUSHROOM_TALES-47.png",
@@ -148,7 +151,7 @@
   <h2 class="section-label">Selected Work</h2>
   <div class="featured__grid">
     {#each featuredWork as item}
-      <a href="/work" class="work-card">
+      <a href="/work/{item.slug}" class="work-card">
         <div class="work-card__image-frame">
           <img
             class="work-card__image"
@@ -250,13 +253,18 @@
     inset: 0;
     background: radial-gradient(
         ellipse 60% 60% at 70% 40%,
-        rgba(139, 94, 82, 0.12) 0%,
-        transparent 70%
+        rgba(110, 100, 194, 0.14) 0%,
+        /* lavender glow */ transparent 70%
       ),
       radial-gradient(
         ellipse 40% 50% at 30% 70%,
-        rgba(200, 184, 154, 0.06) 0%,
-        transparent 60%
+        rgba(236, 59, 130, 0.08) 0%,
+        /* pink blush */ transparent 60%
+      ),
+      radial-gradient(
+        ellipse 50% 40% at 50% 0%,
+        rgba(0, 128, 129, 0.07) 0%,
+        /* teal hint at top */ transparent 70%
       );
     pointer-events: none;
   }
@@ -526,7 +534,7 @@
     position: absolute;
     inset: 0;
     border: 0;
-    background: rgba(5, 5, 5, 0.9);
+    background: rgba(12, 10, 24, 0.92);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     cursor: zoom-out;
@@ -544,8 +552,8 @@
     width: 100%;
     max-height: 82vh;
     object-fit: contain;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    background: #101010;
+    border: 1px solid rgba(110, 100, 194, 0.3);
+    background: #0c0a18;
   }
 
   .lightbox__caption {
@@ -554,7 +562,7 @@
     letter-spacing: 0.12em;
     text-transform: uppercase;
     font-size: 0.68rem;
-    color: rgba(232, 228, 220, 0.8);
+    color: rgba(240, 236, 255, 0.8);
   }
 
   .lightbox__close,
@@ -563,8 +571,8 @@
     z-index: 3;
     width: 2.6rem;
     height: 2.6rem;
-    border: 1px solid rgba(232, 228, 220, 0.22);
-    background: rgba(15, 15, 15, 0.75);
+    border: 1px solid rgba(157, 150, 222, 0.28);
+    background: rgba(23, 18, 40, 0.82);
     color: var(--color-text);
     font-size: 1.2rem;
     line-height: 1;
@@ -577,7 +585,7 @@
   .lightbox__close:hover,
   .lightbox__nav:hover {
     border-color: var(--color-accent);
-    background: rgba(15, 15, 15, 0.95);
+    background: rgba(23, 18, 40, 0.97);
   }
 
   .lightbox__close {

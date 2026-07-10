@@ -76,7 +76,7 @@
     top: 0;
     inset-inline: 0;
     z-index: 100;
-    background: rgba(13, 13, 13, 0.9);
+    background: rgba(12, 10, 24, 0.92);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--color-border);

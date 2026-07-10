@@ -93,11 +93,10 @@ const sources: SourceConfig[] = [
 
 const performanceMetadataByFolder: Record<string, { year: string; description: string; fullDescription: string[] }> = {
 	project_GEWEBE: {
-		year: '2024',
-		description: 'A site-specific performance exploring states of in-between.',
+		year: '2026',
+		description: 'A queer anatomy of connection Zeitgenössisches Tanzsolo.',
 		fullDescription: [
-			'GEWEBE explores transformation through contortion, projection, and fragmented movement. The piece moves between softness and strain, investigating how identity stretches under pressure.',
-			'Visual texture, body architecture, and spatial tension are composed into a physical score where each image feels like a living thread in a larger fabric.'
+			'Der Raum ist von weißen, organisch mäandernden Stoffadern durchzogen, die sich über Boden und Wände erstrecken. Eine verträumte, abstrakte Klanglandschaft erklingt, während das Publikum sich versammelt – außer dem weiten Bühnenbild ist nichts zu erkennen. Im UV-Licht leuchten die Adern und bewegen sich mit jedem Luftzug. Der Raum atmet.'
 		]
 	},
 	'project_Human Nature': {
@@ -109,7 +108,7 @@ const performanceMetadataByFolder: Record<string, { year: string; description: s
 		]
 	},
 	'project_Mushroom Tales': {
-		year: '2023',
+		year: '2025 - 2026',
 		description: 'A creature-based performance blending fantasy, ecology, and movement theatre.',
 		fullDescription: [
 			'Mushroom Tales creates a speculative ecosystem where performers inhabit hybrid, more-than-human figures. Movement language is grounded, curious, and constantly mutating.',
@@ -117,7 +116,7 @@ const performanceMetadataByFolder: Record<string, { year: string; description: s
 		]
 	},
 	'project_Six Pieces': {
-		year: '2023',
+		year: '2026',
 		description: 'A sequence of six connected movement studies.',
 		fullDescription: [
 			'Six Pieces unfolds as a modular dance structure where each section has a distinct kinetic quality, while still feeding into a shared emotional arc.',
@@ -125,7 +124,7 @@ const performanceMetadataByFolder: Record<string, { year: string; description: s
 		]
 	},
 	'project_The Quest of the Lost': {
-		year: '2023',
+		year: '2024',
 		description: 'A performative journey through memory, ritual, and displacement.',
 		fullDescription: [
 			'The Quest of the Lost follows a body in search of orientation through unfamiliar terrain. Repetition, interruption, and symbolic actions shape the narrative language.',
@@ -149,15 +148,15 @@ const performanceMetadataByFolder: Record<string, { year: string; description: s
 		]
 	},
 	project_Uncomfortable: {
-		year: '2022',
+		year: '2025',
 		description: 'A physical performance centered on pressure, intimacy, and unease.',
 		fullDescription: [
 			'Uncomfortable explores social and bodily discomfort as a productive choreographic force. Gestures begin familiar, then drift toward friction and rupture.',
 			'The work invites the audience to stay with vulnerability rather than resolve it too quickly.'
 		]
 	},
-	'project_misc performances': {
-		year: '2022',
+	'project_Legend of Smog': {
+		year: '2024',
 		description: 'A selection of additional live performance works and fragments.',
 		fullDescription: [
 			'This collection presents moments from various performances, tracing recurring themes across different contexts and collaborations.',

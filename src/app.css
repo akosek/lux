@@ -6,24 +6,53 @@
 }
 
 :root {
-  /* Color Palette: Purple / Pink / Teal */
-  /* Dark backgrounds with lavender + pink base, teal accent */
+  /* ─────────────────────────────────────────────────────
+     Design tokens — Purple / Pink / Teal palette
+     Reference: schemecolor.com/purple-pink-teal
+     Base swatches:
+       Blue Marguerite  #6E64C2
+       Mystic Blue      #5946B1
+       Cerise Pink      #EC3B82
+       Teal             #008081
+       Vintage Mint     #68AF9C
+  ───────────────────────────────────────────────────── */
 
-  /* Neutrals (dark mode) */
-  --color-bg:        #0d0d0f;
-  --color-surface:   #1a1a24;
-  --color-border:    #2d2d3f;
-  --color-text:      #e8e4dc;
-  --color-muted:     #9ca3af;
+  /* ── Raw palette ── */
+  --palette-lavender:      #6E64C2;   /* Blue Marguerite */
+  --palette-lavender-lt:   #9D96DE;   /* lightened for dark-bg legibility */
+  --palette-purple:        #5946B1;   /* Mystic Blue */
+  --palette-purple-dk:     #3D2E8A;   /* darker shade */
+  --palette-pink:          #EC3B82;   /* Cerise Pink */
+  --palette-pink-lt:       #F472A8;   /* lighter pink */
+  --palette-pink-dk:       #B52260;   /* deeper rose */
+  --palette-teal:          #008081;   /* Teal */
+  --palette-teal-lt:       #0AADAD;   /* brighter teal for dark bg */
+  --palette-mint:          #68AF9C;   /* Vintage Mint */
+  --palette-mint-lt:       #8ECFC0;   /* lighter mint */
 
-  /* Primary accents */
-  --color-accent:    #14b8a6;   /* teal - main accent/contrast */
-  --color-accent-2:  #d946a6;   /* hot pink/magenta - secondary accent */
+  /* ── Semantic surface tokens (dark, purple-tinted) ── */
+  --color-bg:        #0c0a18;   /* near-black with deep purple tint */
+  --color-surface:   #171228;   /* card / panel surface */
+  --color-surface-2: #231a3a;   /* elevated surface / hover bg */
+  --color-border:    #3a2d5c;   /* subtle purple-tinted border */
+  --color-border-lt: #5a4880;   /* lighter border for hover states */
 
-  /* Supporting palette */
-  --color-purple:    #a78bfa;   /* lavender - supporting/hover states */
-  --color-purple-dark: #7c3aed; /* deep purple */
-  --color-cyan-bright: #06b6d4; /* bright cyan (alternative accent) */
+  /* ── Text tokens ── */
+  --color-text:      #f0ecff;   /* near-white with lavender tint */
+  --color-muted:     #a89fca;   /* muted lavender-grey */
+  --color-subtle:    #6b5f8a;   /* very subtle text / decorative */
+
+  /* ── Accent tokens (semantic) ── */
+  --color-accent:        var(--palette-teal-lt);    /* teal — main contrast accent */
+  --color-accent-hover:  var(--palette-mint);       /* mint — teal hover */
+  --color-accent-2:      var(--palette-pink);       /* cerise pink — secondary accent */
+  --color-accent-2-hover:var(--palette-pink-lt);    /* lighter pink hover */
+  --color-accent-3:      var(--palette-lavender-lt);/* lavender — tertiary / decorative */
+  --color-accent-3-hover:var(--palette-lavender);   /* deeper lavender hover */
+
+  /* ── Kept for backwards-compat (alias to new tokens) ── */
+  --color-purple:      var(--palette-lavender-lt);
+  --color-purple-dark: var(--palette-purple);
 
   /* Typography */
   --font-display: 'Cormorant Garamond', Georgia, serif;

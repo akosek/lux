@@ -283,7 +283,7 @@
     position: absolute;
     inset: 0;
     border: 0;
-    background: rgba(5, 5, 5, 0.92);
+    background: rgba(12, 10, 24, 0.93);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     cursor: zoom-out;
@@ -315,8 +315,8 @@
     width: 100%;
     max-height: 82vh;
     object-fit: contain;
-    background: #101010;
-    border: 1px solid rgba(255, 255, 255, 0.16);
+    background: #0c0a18;
+    border: 1px solid rgba(110, 100, 194, 0.28);
     display: block;
   }
 
@@ -326,7 +326,7 @@
     letter-spacing: 0.14em;
     text-transform: uppercase;
     font-size: 0.68rem;
-    color: rgba(232, 228, 220, 0.78);
+    color: rgba(240, 236, 255, 0.78);
   }
 
   .lightbox__close,
@@ -335,8 +335,8 @@
     z-index: 3;
     width: 2.7rem;
     height: 2.7rem;
-    border: 1px solid rgba(232, 228, 220, 0.22);
-    background: rgba(15, 15, 15, 0.76);
+    border: 1px solid rgba(157, 150, 222, 0.28);
+    background: rgba(23, 18, 40, 0.82);
     color: var(--color-text);
     font-size: 1.2rem;
     line-height: 1;
@@ -349,7 +349,7 @@
   .lightbox__close:hover,
   .lightbox__nav:hover {
     border-color: var(--color-accent);
-    background: rgba(15, 15, 15, 0.95);
+    background: rgba(23, 18, 40, 0.97);
   }
 
   .lightbox__close {
